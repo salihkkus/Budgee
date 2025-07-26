@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/main_background"
+    android:padding="24dp">
+
+    <!-- Welcome Message -->
+    <TextView
+        android:id="@+id/welcomeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Budgee uygulamasına hoş geldiniz!"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="32dp" />
+
+    <!-- App Logo/Icon Placeholder -->
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="Budgee Logo" />
+
+    <!-- Quick Actions Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="32dp">
+
+        <!-- Add Expense Button -->
+        <Button
+            android:id="@+id/addExpenseButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Gider Ekle"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:background="@drawable/primary_button_background"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:elevation="4dp" />
+
+        <!-- View Budget Button -->
+        <Button
+            android:id="@+id/viewBudgetButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Bütçeyi Görüntüle"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:background="@drawable/secondary_button_background"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:elevation="4dp" />
+
+        <!-- Settings Button -->
+        <Button
+            android:id="@+id/settingsButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Ayarlar"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:background="@drawable/secondary_button_background"
+            android:fontFamily="sans-serif-medium"
+            android:elevation="4dp" />
+
+    </LinearLayout>
+
+</LinearLayout> 
