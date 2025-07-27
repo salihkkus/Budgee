@@ -1,53 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/main_background"
-    android:padding="@dimen/screen_padding">
+    android:fillViewport="true">
 
-    <!-- Header with App Title -->
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_marginBottom="@dimen/header_margin_bottom">
+        android:padding="@dimen/screen_padding">
 
+        <!-- Header with App Title -->
         <TextView
+            android:id="@+id/appTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Budgee"
             android:textColor="#FFFFFF"
             android:textSize="@dimen/app_title_size"
             android:textStyle="bold"
-            android:fontFamily="sans-serif-medium" />
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    </LinearLayout>
-
-    <!-- Menu Items Container -->
-    <LinearLayout
-        android:layout_width="191dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hoşgeldiniz"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            app:layout_constraintTop_toBottomOf="@id/appTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <!-- Settings Button -->
         <LinearLayout
             android:id="@+id/settingsButton"
-            android:layout_width="160dp"
+            android:layout_width="0dp"
             android:layout_height="@dimen/menu_item_height"
-            android:layout_marginBottom="@dimen/menu_item_margin"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/menu_item_background"
             android:clickable="true"
             android:elevation="2dp"
             android:focusable="true"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="@dimen/menu_item_padding">
+            android:padding="@dimen/menu_item_padding"
+            app:layout_constraintTop_toBottomOf="@id/welcomeText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <TextView
                 android:layout_width="0dp"
@@ -68,22 +77,23 @@
         </LinearLayout>
 
         <!-- Budget Status Button -->
-
-        <!-- Spending History Button -->
-
-        <!-- Add Expense Button -->
         <LinearLayout
             android:id="@+id/viewBudgetButton"
-            android:layout_width="160dp"
+            android:layout_width="0dp"
             android:layout_height="@dimen/menu_item_height"
-            android:layout_marginBottom="@dimen/menu_item_margin"
+            android:layout_marginTop="@dimen/menu_item_margin"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/menu_item_background"
             android:clickable="true"
             android:elevation="2dp"
             android:focusable="true"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="@dimen/menu_item_padding">
+            android:padding="@dimen/menu_item_padding"
+            app:layout_constraintTop_toBottomOf="@id/settingsButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <TextView
                 android:layout_width="0dp"
@@ -103,18 +113,24 @@
 
         </LinearLayout>
 
+        <!-- Spending History Button -->
         <LinearLayout
             android:id="@+id/spendingHistoryButton"
-            android:layout_width="160dp"
+            android:layout_width="0dp"
             android:layout_height="@dimen/menu_item_height"
-            android:layout_marginBottom="@dimen/menu_item_margin"
+            android:layout_marginTop="@dimen/menu_item_margin"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/menu_item_background"
             android:clickable="true"
             android:elevation="2dp"
             android:focusable="true"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="@dimen/menu_item_padding">
+            android:padding="@dimen/menu_item_padding"
+            app:layout_constraintTop_toBottomOf="@id/viewBudgetButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <TextView
                 android:layout_width="0dp"
@@ -134,18 +150,24 @@
 
         </LinearLayout>
 
+        <!-- Add Expense Button -->
         <LinearLayout
             android:id="@+id/addExpenseButton"
-            android:layout_width="160dp"
+            android:layout_width="0dp"
             android:layout_height="@dimen/menu_item_height"
-            android:layout_marginBottom="@dimen/menu_item_margin"
+            android:layout_marginTop="@dimen/menu_item_margin"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/menu_item_background"
             android:clickable="true"
             android:elevation="2dp"
             android:focusable="true"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="@dimen/menu_item_padding">
+            android:padding="@dimen/menu_item_padding"
+            app:layout_constraintTop_toBottomOf="@id/spendingHistoryButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <TextView
                 android:layout_width="0dp"
@@ -168,15 +190,23 @@
         <!-- Notifications Button -->
         <LinearLayout
             android:id="@+id/notificationsButton"
-            android:layout_width="160dp"
+            android:layout_width="0dp"
             android:layout_height="@dimen/menu_item_height"
+            android:layout_marginTop="@dimen/menu_item_margin"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/menu_item_background"
             android:clickable="true"
             android:elevation="2dp"
             android:focusable="true"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="@dimen/menu_item_padding">
+            android:padding="@dimen/menu_item_padding"
+            app:layout_constraintTop_toBottomOf="@id/addExpenseButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <TextView
                 android:layout_width="0dp"
@@ -196,6 +226,6 @@
 
         </LinearLayout>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</LinearLayout> 
+</ScrollView> 

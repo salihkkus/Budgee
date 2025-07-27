@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Budgee</string>
+    <string name="welcome_message">Hoşgeldiniz</string>
+    <string name="user_name">Ceren Kodaş</string>
 </resources>

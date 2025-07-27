@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Screen padding -->
+    <dimen name="screen_padding">24dp</dimen>
+    
+    <!-- Header dimensions -->
+    <dimen name="header_margin_bottom">32dp</dimen>
+    <dimen name="app_title_size">28sp</dimen>
+    <dimen name="header_icon_size">28dp</dimen>
+    
+    <!-- Menu item dimensions -->
+    <dimen name="menu_item_height">60dp</dimen>
+    <dimen name="menu_item_padding">20dp</dimen>
+    <dimen name="menu_item_margin">16dp</dimen>
+    <dimen name="menu_text_size">18sp</dimen>
+    <dimen name="menu_icon_size">24dp</dimen>
+    
+    <!-- Button dimensions -->
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="button_padding">20dp</dimen>
+    <dimen name="button_text_size">18sp</dimen>
+    
+    <!-- Card dimensions -->
+    <dimen name="card_padding">24dp</dimen>
+    <dimen name="card_margin">20dp</dimen>
+    <dimen name="card_corner_radius">16dp</dimen>
+    
+    <!-- Text sizes -->
+    <dimen name="text_large">24sp</dimen>
+    <dimen name="text_medium">18sp</dimen>
+    <dimen name="text_small">16sp</dimen>
+    <dimen name="text_xsmall">14sp</dimen>
+</resources> 

@@ -40,4 +40,7 @@ dependencies {
 
     // ☁️ Firebase Core (bazı özellikler için gerekli olabilir)
     implementation 'com.google.firebase:firebase-analytics:21.6.1'
+    
+    // 📱 ConstraintLayout for responsive design
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 }
