@@ -23,14 +23,21 @@
             android:textStyle="bold"
             android:fontFamily="sans-serif-medium" />
 
-        <Button
+        <ImageButton
             android:id="@+id/backButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="←"
-            android:textColor="#FFFFFF"
-            android:background="@drawable/secondary_button_background"
-            android:fontFamily="sans-serif-medium" />
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_revert"
+            android:background="@drawable/button_background"
+            android:contentDescription="Geri" />
+
+        <ImageButton
+            android:id="@+id/editButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_edit"
+            android:background="@drawable/button_background"
+            android:contentDescription="Düzenle" />
 
     </LinearLayout>
 
@@ -138,7 +145,7 @@
 
             </LinearLayout>
 
-            <!-- Progress Bar -->
+            <!-- Category Progress -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -151,30 +158,85 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bütçe Kullanımı"
+                    android:text="Kategori Bazında İlerleme"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"
                     android:fontFamily="sans-serif-medium"
-                    android:layout_marginBottom="12dp" />
+                    android:layout_marginBottom="16dp" />
 
-                <ProgressBar
-                    android:id="@+id/budgetProgressBar"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="8dp"
-                    android:progress="47"
-                    android:progressTint="#4CAF50"
-                    android:backgroundTint="#444444" />
-
+                <!-- Food Progress -->
                 <TextView
-                    android:id="@+id/progressText"
+                    android:id="@+id/foodProgressText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="47% kullanıldı"
-                    android:textColor="#CCCCCC"
+                    android:text="Yemek: ₺1,200 / ₺1,500 (80%)"
+                    android:textColor="#4CAF50"
                     android:textSize="14sp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif" />
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <LinearLayout
+                    android:id="@+id/foodProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:background="#444444"
+                    android:layout_marginBottom="16dp">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="80"
+                        android:background="#4CAF50" />
+                </LinearLayout>
+
+                <!-- Transport Progress -->
+                <TextView
+                    android:id="@+id/transportProgressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ulaşım: ₺450 / ₺800 (56%)"
+                    android:textColor="#FF9800"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <LinearLayout
+                    android:id="@+id/transportProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:background="#444444"
+                    android:layout_marginBottom="16dp">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="56"
+                        android:background="#FF9800" />
+                </LinearLayout>
+
+                <!-- Entertainment Progress -->
+                <TextView
+                    android:id="@+id/entertainmentProgressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eğlence: ₺800 / ₺1,000 (80%)"
+                    android:textColor="#F44336"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <LinearLayout
+                    android:id="@+id/entertainmentProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:background="#444444">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="80"
+                        android:background="#F44336" />
+                </LinearLayout>
 
             </LinearLayout>
 

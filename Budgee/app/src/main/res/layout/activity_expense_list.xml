@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/main_background">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_revert"
+            android:background="@drawable/button_background"
+            android:contentDescription="Geri" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hesap Hareketleri"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_marginStart="16dp" />
+
+        <ImageButton
+            android:id="@+id/addButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_input_add"
+            android:background="@drawable/button_background"
+            android:contentDescription="Ekle" />
+    </LinearLayout>
+
+    <!-- Summary Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toplam Harcama"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/totalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₺2,450"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FF6B6B" />
+    </LinearLayout>
+
+    <!-- Expense List -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Expense Item 1 -->
+            <include layout="@layout/item_expense" />
+
+            <!-- Expense Item 2 -->
+            <include layout="@layout/item_expense" />
+
+            <!-- Expense Item 3 -->
+            <include layout="@layout/item_expense" />
+
+            <!-- Expense Item 4 -->
+            <include layout="@layout/item_expense" />
+
+            <!-- Expense Item 5 -->
+            <include layout="@layout/item_expense" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout> 

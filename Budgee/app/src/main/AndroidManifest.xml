@@ -18,6 +18,18 @@
         </activity>
         <activity android:name=".MainActivity"
             android:exported="false" />
+        <activity android:name=".AddExpenseActivity"
+            android:exported="false" />
+        <activity android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity android:name=".BudgetViewActivity"
+            android:exported="false" />
+        <activity android:name=".SpendingHistoryActivity"
+            android:exported="false" />
+        <activity android:name=".ExpenseListActivity"
+            android:exported="false" />
+        <activity android:name=".NotificationsActivity"
+            android:exported="false" />
         <meta-data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
