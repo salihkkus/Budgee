@@ -1,5 +1,6 @@
 package com.example.budgee;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -48,6 +49,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     // Kullanıcı bilgilerini getir
+    @SuppressLint("Range")
     public String getUserName() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_USERS, new String[]{COLUMN_NAME}, 
