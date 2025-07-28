@@ -1,5 +1,14 @@
 <resources>
+    <!-- Uygulama bilgileri -->
     <string name="app_name">Budgee</string>
     <string name="welcome_message">Hoşgeldiniz</string>
     <string name="user_name">Ceren Kodaş</string>
+
+    <!-- ✅ Yeni: ChatBot ile ilgili stringler -->
+    <string name="chatbot_welcome">Hoş geldin! Sana nasıl yardımcı olabilirim?</string>
+    <string name="hint_input_message">Mesajınızı yazın...</string>
+    <string name="send_button_text">Gönder</string>
+    <string name="chatbot_error">Hata oluştu. Lütfen daha sonra tekrar deneyin.</string>
+    <string name="maskot_content_description">Maskot - Sohbet başlat</string>
 </resources>
+
