@@ -1,75 +1,41 @@
 plugins {
-
-    alias(libs.plugins.android.application)
-
+    id 'com.android.application'
 }
 
 android {
-
     namespace 'com.example.budgee'
-
     compileSdk 36
 
     defaultConfig {
-
         applicationId "com.example.budgee"
-
         minSdk 30
-
         targetSdk 36
-
         versionCode 1
-
         versionName "1.0"
-
     }
 
     buildTypes {
-
         release {
-
             minifyEnabled false
-
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-
         }
-
     }
 
     compileOptions {
-
         sourceCompatibility JavaVersion.VERSION_11
-
         targetCompatibility JavaVersion.VERSION_11
-
     }
-
 }
 
 dependencies {
     implementation 'com.github.bumptech.glide:glide:4.15.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
-
-
-    implementation "androidx.appcompat:appcompat:1.7.1"
-
-    // ⌚ Saat uygulaması için Google Play Services
-
-    implementation libs.play.services.wearable
-
-    // 📱 Layout desteği
-
+    implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-
-    // 🌐 ✅ Retrofit: OpenAI API ile iletişim için
-
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-
-    // 🧠 ✅ Gson: JSON veri dönüşümleri için
-
     implementation 'com.google.code.gson:gson:2.8.9'
 
+    // Google Play Services for Wear OS (saat uygulaması için)
+    implementation 'com.google.android.gms:play-services-wearable:18.1.0'
 }
-
